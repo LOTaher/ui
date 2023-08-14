@@ -1,13 +1,13 @@
 import { cn } from "@/lib/utils";
-import { buttonVariants } from "./ui/button";
+import { buttonVariants } from "../ui/button";
 import Link from "next/link";
 import {
   Tooltip,
   TooltipContent,
   TooltipProvider,
   TooltipTrigger,
-} from "./ui/tooltip";
-import { Icons } from "./icons";
+} from "../ui/tooltip";
+import { Icons } from "../icons";
 
 async function getRepoStars() {
   const res = await fetch("https://api.github.com/repos/LOTaher/ui");

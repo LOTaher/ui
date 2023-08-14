@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Icons } from "./icons";
+import { Icons } from "../icons";
 
 export default function GettingStarted() {
   const [copy, setCopy] = useState(false);
