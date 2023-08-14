@@ -1,7 +1,7 @@
 "use client";
-import Features from "@/components/features";
-import GettingStarted from "@/components/getting-started";
-import Hero from "@/components/hero";
+import Features from "@/components/landing/features";
+import GettingStarted from "@/components/landing/getting-started";
+import Hero from "@/components/landing/hero";
 
 export default function Home() {
   return (
