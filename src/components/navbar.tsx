@@ -29,9 +29,17 @@ export default function Navbar() {
           >
             Components
           </Link>
+          <Link
+            href="/"
+            className={cn(
+              "transition-colors hover:text-foreground/80",
+              pathname === "/docs" ? "text-foreground" : "text-foreground/60"
+            )}
+          >
+            Docs
+          </Link>
         </div>
         <div className="flex items-center space-x-3">
-          <ModeToggle />
           <Link target="_blank" href="/">
             <div
               className={cn(
@@ -58,6 +66,7 @@ export default function Navbar() {
               <span className="sr-only">Twitter</span>
             </div>
           </Link>
+          <ModeToggle />
         </div>
       </nav>
     </header>

@@ -35,12 +35,12 @@ export default async function Hero() {
               buttonVariants({
                 variant: "default",
               }),
-              "xl:h-11 sm:h-9 rounded-md px-8 h-10"
+              "lg:h-11 sm:h-9 rounded-md px-8 h-10"
             )}
           >
             <Link
               href="/components"
-              className="flex items-center xl:text-lg sm:text-sm text-base"
+              className="flex items-center lg:text-lg sm:text-sm text-base"
             >
               Get Started
             </Link>
@@ -53,7 +53,7 @@ export default async function Hero() {
                     buttonVariants({
                       variant: "default",
                     }),
-                    "xl:h-11 sm:h-9 rounded-md px-8 h-10"
+                    "lg:h-11 sm:h-9 rounded-md px-8 h-10"
                   )}
                 >
                   <Link
