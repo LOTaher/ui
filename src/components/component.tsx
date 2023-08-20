@@ -16,19 +16,24 @@ import {
   DialogTitle,
   DialogTrigger,
 } from "@/components/ui/dialog";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
+import { ScrollArea } from "./ui/scroll-area";
+import Code from "./code";
 
 interface ComponentProps {
   title: string;
   description: string;
   component: React.ReactNode;
-  children: React.ReactNode;
+  nextjs: string;
+  reactjs: string;
 }
 
 export default function Component({
   title,
   description,
   component,
-  children,
+  nextjs,
+  reactjs,
 }: ComponentProps) {
   return (
     <Card>
@@ -48,7 +53,26 @@ export default function Component({
               <DialogDescription>{description}</DialogDescription>
             </DialogHeader>
             {/* Dialog Content */}
-            {children}
+            <Tabs>
+              <TabsList>
+                <TabsTrigger value="nextjs">Next.js</TabsTrigger>
+                <TabsTrigger value="reactjs">React.js</TabsTrigger>
+              </TabsList>
+              <TabsContent value="nextjs">
+                <div className="flex w-full content-center justify-center">
+                  <ScrollArea className="h-72 w-96">
+                    <Code language="javascript" code={nextjs} show />
+                  </ScrollArea>
+                </div>
+              </TabsContent>
+              <TabsContent value="reactjs">
+                <div className="flex w-full content-center justify-center">
+                  <ScrollArea className="h-72 w-96">
+                    <Code language="javascript" code={reactjs} show />
+                  </ScrollArea>
+                </div>
+              </TabsContent>
+            </Tabs>
             <DialogFooter>
               <Button>Copy</Button>
             </DialogFooter>
