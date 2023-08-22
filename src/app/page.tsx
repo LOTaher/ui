@@ -1,4 +1,3 @@
-"use client";
 import Features from "@/components/landing/features";
 import GettingStarted from "@/components/landing/getting-started";
 import Hero from "@/components/landing/hero";
