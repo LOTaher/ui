@@ -41,7 +41,9 @@ export default function Component({
         <CardTitle>{title}</CardTitle>
         <CardDescription>{description}</CardDescription>
       </CardHeader>
-      <CardContent>{component}</CardContent>
+      <CardContent className="flex justify-center content-center">
+        {component}
+      </CardContent>
       <CardFooter>
         <Dialog>
           <DialogTrigger asChild>
