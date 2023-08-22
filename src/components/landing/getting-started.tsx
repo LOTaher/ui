@@ -1,5 +1,8 @@
 import { useState } from "react";
 import { Icons } from "../icons";
+import { buttonVariants } from "../ui/button";
+import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 export default function GettingStarted() {
   const [copy, setCopy] = useState(false);
@@ -33,6 +36,23 @@ export default function GettingStarted() {
               <Icons.copy className="h-6 w-6" />
             )}
           </button>
+        </div>
+        <div className="flex justify-center mt-4">
+          <div
+            className={cn(
+              buttonVariants({
+                variant: "default",
+              }),
+              "xl:h-11 sm:h-9 rounded-md px-8 h-10"
+            )}
+          >
+            <Link
+              href="/components"
+              className="flex items-center xl:text-lg sm:text-sm text-base"
+            >
+              View Components
+            </Link>
+          </div>
         </div>
       </div>
     </div>
