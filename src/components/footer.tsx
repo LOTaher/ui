@@ -5,7 +5,7 @@ export default function Footer() {
         <p className="text-center text-sm leading-loose text-muted-foreground md:text-left">
           Built by{" "}
           <a
-            href="/"
+            href="https://www.splatte.dev/"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"
@@ -14,7 +14,7 @@ export default function Footer() {
           </a>
           . The source code is available on{" "}
           <a
-            href="/"
+            href="https://github.com/LOTaher/ui"
             target="_blank"
             rel="noreferrer"
             className="font-medium underline underline-offset-4"

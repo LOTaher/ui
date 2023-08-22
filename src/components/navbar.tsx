@@ -15,11 +15,11 @@ export default function Navbar() {
         <div className="flex items-center py-2 space-x-6">
           <div>
             <Link href="/" className="mr-2 font-bold">
-              LOTaher/ui
+              splatte/ui
             </Link>
           </div>
           <Link
-            href="/"
+            href="/components"
             className={cn(
               "transition-colors hover:text-foreground/80",
               pathname === "/components"
@@ -29,18 +29,9 @@ export default function Navbar() {
           >
             Components
           </Link>
-          <Link
-            href="/"
-            className={cn(
-              "transition-colors hover:text-foreground/80",
-              pathname === "/docs" ? "text-foreground" : "text-foreground/60"
-            )}
-          >
-            Docs
-          </Link>
         </div>
         <div className="flex items-center space-x-3">
-          <Link target="_blank" href="/">
+          <Link target="_blank" href="https://github.com/LOTaher/ui">
             <div
               className={cn(
                 buttonVariants({
@@ -53,7 +44,7 @@ export default function Navbar() {
               <span className="sr-only">Github</span>
             </div>
           </Link>
-          <Link target="_blank" href="/">
+          <Link target="_blank" href="https://twitter.com/SplatteDev">
             <div
               className={cn(
                 buttonVariants({
