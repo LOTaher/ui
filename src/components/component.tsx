@@ -1,3 +1,4 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -19,6 +20,8 @@ import {
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
 import { ScrollArea } from "./ui/scroll-area";
 import Code from "./code";
+import { Icons } from "./icons";
+import { useState } from "react";
 
 interface ComponentProps {
   title: string;
@@ -35,6 +38,16 @@ export default function Component({
   nextjs,
   reactjs,
 }: ComponentProps) {
+  const [copy, setCopy] = useState(false);
+
+  function handleCopy() {
+    navigator.clipboard.writeText(nextjs);
+    setCopy(true);
+    setTimeout(() => {
+      setCopy(false);
+    }, 2000);
+  }
+
   return (
     <Card>
       <CardHeader>
@@ -54,7 +67,6 @@ export default function Component({
               <DialogTitle>{title}</DialogTitle>
               <DialogDescription>{description}</DialogDescription>
             </DialogHeader>
-            {/* Dialog Content */}
             <Tabs>
               <TabsList>
                 <TabsTrigger value="nextjs">Next.js</TabsTrigger>
@@ -76,7 +88,13 @@ export default function Component({
               </TabsContent>
             </Tabs>
             <DialogFooter>
-              <Button>Copy</Button>
+              <button onClick={() => handleCopy()}>
+                {copy ? (
+                  <Icons.check className="h-5 w-5" />
+                ) : (
+                  <Icons.copy className="h-5 w-5" />
+                )}
+              </button>
             </DialogFooter>
           </DialogContent>
         </Dialog>
